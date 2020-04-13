@@ -1,0 +1,25 @@
+{
+    "name": "vcian/contactable",
+    "description": "This package used for store contact data",
+    "type": "library",
+    "authors": [
+        {
+            "name": "vc-dhavaljoshi",
+            "email": "dhaval.joshi@viitor.cloud"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Vcian\\Contactable\\": "packages/vcian/contactable/src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vcian\\Contactable\\ContactServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
