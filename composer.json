@@ -1,5 +1,5 @@
 {
-    "name": "vcian/contactable",
+    "name": "dj/contactable",
     "description": "This package used for store contact data",
     "type": "library",
     "authors": [
@@ -11,13 +11,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Vcian\\Contactable\\": "packages/vcian/contactable/src/"
+            "dj\\Contactable\\": "packages/vcian/contactable/src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Vcian\\Contactable\\ContactServiceProvider"
+                "dj\\Contactable\\ContactServiceProvider"
             ]
         }
     },
