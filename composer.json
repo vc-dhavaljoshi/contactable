@@ -2,16 +2,19 @@
     "name": "viitortest/contactable",
     "description": "This package used for store contact data",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "vc-dhavaljoshi",
             "email": "dhaval.joshi@viitor.cloud"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "^7.0.0"
+    },
     "autoload": {
         "psr-4": {
-            "viitortest\\Contactable\\": "packages/vcian/contactable/src/"
+            "viitortest\\Contactable\\": "src/"
         }
     },
     "extra": {
@@ -21,5 +24,6 @@
             ]
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

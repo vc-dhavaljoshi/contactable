@@ -1,8 +1,9 @@
 <?php
-namespace Vcian\Contactable\Traits;
+namespace Viitortest\Contactable\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Vcian\Contactable\Models\Contactable;
+use Viitortest\Contactable\Models\Contactable;
+
 
 /**
  * Trait Contactable

@@ -1,6 +1,6 @@
 <?php
 
-namespace Vcian\Contactable;
+namespace Viitortest\Contactable;
 
 use Illuminate\Support\ServiceProvider;
 

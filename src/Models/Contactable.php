@@ -1,6 +1,6 @@
 <?php
 
-namespace Vcian\Contactable\Models;
+namespace Viitortest\Contactable\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
