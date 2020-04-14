@@ -6,7 +6,7 @@
 
 1. Install the package via composer:
     ```shell
-    composer require dj/contactable
+    composer require viitortest/contactable
     ```
 
 2. Publish resources (migrations and config files):
