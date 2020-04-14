@@ -24,7 +24,7 @@
 
 ## Usage
 
-To add contacts support to your eloquent models simply use `\Rinvex\Contacts\Traits\HasContacts` trait.
+To add contacts support to your eloquent models simply use `\Viitortest\Contacts\Traits\HasContacts` trait.
 
 ### Manage your contacts
 
