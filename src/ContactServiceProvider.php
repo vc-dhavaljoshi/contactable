@@ -6,23 +6,19 @@ use Illuminate\Support\ServiceProvider;
 
 class ContactServiceProvider extends ServiceProvider
 {
-    /**
-     * Register services.
-     *
-     * @return void
-     */
+
     public function register()
     {
-
+       $this->publishResources();
     }
 
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__.'/database');
+    }
+
+    protected function publishResources()
+    {
+        $this->publishes([__DIR__ . '/../database' => database_path('migrations/')], 'contact-migrations');
     }
 }

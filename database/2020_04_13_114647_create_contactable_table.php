@@ -20,8 +20,8 @@ class CreateContactableTable extends Migration
             $table->string('first_name',50)->nullable();
             $table->string('last_name',50)->nullable();
             $table->string('email',50)->nullable();
-            $table->integer('phone')->nullable();
-            $table->dateTime('birth_date')->nullable();
+            $table->string('phone')->nullable();
+            $table->date('birth_date')->nullable();
             $table->tinyInteger('order')->default(0);
             $table->tinyInteger('is_primary')->comment("1=> true, 0=> false");
             $table->json('extra_attributes')->nullable();
