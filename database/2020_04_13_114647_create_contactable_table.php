@@ -13,20 +13,22 @@ class CreateContactableTable extends Migration
      */
     public function up()
     {
-        Schema::create('contactable', function (Blueprint $table) {
-            $table->id();
+        Schema::create($this->getTableName(), function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('model_id');
             $table->string('model_type');
-            $table->string('first_name',50)->nullable();
-            $table->string('last_name',50)->nullable();
+            $table->string('name',100)->nullable();
             $table->string('email',50)->nullable();
             $table->string('phone')->nullable();
-            $table->date('birth_date')->nullable();
             $table->tinyInteger('order')->default(0);
-            $table->tinyInteger('is_primary')->comment("1=> true, 0=> false");
             $table->json('extra_attributes')->nullable();
             $table->timestamps();
         });
+    }
+
+    public function getTableName()
+    {
+        return config('contact-table.tables.contacts');
     }
 
     /**
@@ -36,6 +38,6 @@ class CreateContactableTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contactable');
+        Schema::dropIfExists($this->getTableName());
     }
 }

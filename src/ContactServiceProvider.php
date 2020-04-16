@@ -19,6 +19,10 @@ class ContactServiceProvider extends ServiceProvider
 
     protected function publishResources()
     {
-        $this->publishes([__DIR__ . '/../database' => database_path('migrations/')], 'contact-migrations');
+        $this->publishes([
+            __DIR__.'/../config/contact-table.php' => config_path('contact-table.php')
+        ],'contact-config');
+        $this->publishes([
+            __DIR__ . '/../database' => database_path('migrations/')], 'contact-migrations');
     }
 }

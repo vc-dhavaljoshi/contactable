@@ -12,6 +12,7 @@
 2. Publish resources (migrations and config files):
     ```shell
     php artisan vendor:publish --tag=contact-migrations
+    php artisan vendor:publish --tag=contact-config
     ```
 
 3. Execute migrations via the following command:

@@ -3,25 +3,28 @@
     "description": "This package used for store contact data",
     "type": "library",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "vc-dhavaljoshi",
-            "email": "dhaval.joshi@viitor.cloud"
-        }
-    ],
+    "authors": [{
+        "name": "vc-dhavaljoshi",
+        "email": "dhaval.joshi@viitor.cloud"
+    }],
     "require": {
         "php": "^7.0.0",
         "laravel/laravel": "^5.1"
     },
     "autoload": {
         "psr-4": {
-            "viitortest\\Contactable\\": "src/"
+            "Viitortest\\Contactable\\": "src/"
         }
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
     },
     "extra": {
         "laravel": {
             "providers": [
-                "viitortest\\Contactable\\ContactServiceProvider"
+                "Viitortest\\Contactable\\ContactServiceProvider"
             ]
         }
     },
