@@ -28,4 +28,21 @@ trait HasContacts
     {
         return $this->morphMany(Contactable::class, 'model');
     }
+
+    public function addSingleContact($data){
+        return $this->contacts()->create($data);
+    }
+
+    /**
+     * Create a Collection of new instances of the related model.
+     *
+     * @param  array  $records
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function addManyContacts(array $records)
+    {
+        foreach ($records as $record) {
+            $this->contacts()->create($record);
+        }
+    }
 }

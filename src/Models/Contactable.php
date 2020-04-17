@@ -6,15 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contactable extends Model
 {
+    public function getTable()
+    {
+        return config('contact-table.tables.contacts');
+    }
+    
     /**
      * @var string
      */
-    protected $table = 'contactable';
 
     /**
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email','phone','birth_date','order','is_primary','extra_attributes'
+        'name', 'email','phone'
     ];
+
+  
 }

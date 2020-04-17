@@ -6,6 +6,6 @@ return [
 
      // Contacts Database Tables
      'tables' => [
-         'contacts' => 'contact_tables',
+         'contacts' => 'contactable',
      ],
 ];
