@@ -1,6 +1,7 @@
 <?php
 namespace Viitortest\Contactable\Traits;
 
+use App\User;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Viitortest\Contactable\Models\Contactable;
 
@@ -29,15 +30,17 @@ trait HasContacts
         return $this->morphMany(Contactable::class, 'model');
     }
 
-    public function addSingleContact($data){
+    /**
+     * Create single contact using this method.
+     * @param array $data
+     */
+    public function addContact($data){
         return $this->contacts()->create($data);
     }
 
     /**
-     * Create a Collection of new instances of the related model.
-     *
+     * Create multiple contacts using this method.
      * @param  array  $records
-     * @return \Illuminate\Database\Eloquent\Collection
      */
     public function addManyContacts(array $records)
     {

@@ -34,7 +34,7 @@ To add contacts support to your eloquent models simply use `\Viitortest\Contacts
 $user = new \App\Models\User::find(1);
 
 // Create a single contact
-$user->addSingleContact([
+$user->addContact([
     'name' => 'Dhaval Joshi',
     'email' => 'dhaval@example.com',
     'phone' => '9999999999',
